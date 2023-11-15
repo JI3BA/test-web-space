@@ -6,3 +6,8 @@
   padding: 6rem;
   min-height: 100vh;
 }
+
+.wrapper{
+  max-width: 1290px;
+  width: 100%;
+}
