@@ -1,9 +1,10 @@
 import styles from './page.module.css'
+import Slider from "@/app/components/Slider/Slider";
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <h1>Hello</h1>
+      <Slider />
     </main>
   )
 }
