@@ -1,0 +1,36 @@
+.footer{
+    display: flex;
+    justify-content: center;
+    background: #000000;
+}
+
+.footer__container{
+    display: flex;
+}
+
+.block{
+    display: flex;
+    flex-direction: column;
+    font-family: Nunito, sans-serif;
+    font-style: normal;
+    color: #FFFFFF;
+    padding: 58px 0 108px 0;
+}
+
+.block:nth-child(2){
+    margin-left: 168px;
+}
+
+.block__title{
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 140%;
+}
+
+.block__desc{
+    font-size: 21px;
+    font-weight: 500;
+    line-height: normal;
+    padding: 20px 0 0 30px;
+}
+
