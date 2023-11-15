@@ -22,6 +22,7 @@ const Slider = () => {
         <div className={`${s.slider} ${nunito.className}`}>
             <div className={m.wrapper}>
                 <div className={s.carousel}>
+
                     <div className={s.carousel__container}>
                         {slides.map((slide, index) => (
                             <div
@@ -41,6 +42,7 @@ const Slider = () => {
                             </div>
                         ))}
                     </div>
+
                     <div className={s.pagination}>
                         {slides.map((slide, index) => (
                             <span
