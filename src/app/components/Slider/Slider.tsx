@@ -13,7 +13,7 @@ const Slider = () => {
         { id: 3, title: "Потребовалось на тестовое задание:", description: "Справился быстро, забыл пообедать", unit: '9', unitDesc: 'часов' },
     ];
 
-    const changeSlide = (index) => {
+    const changeSlide = (index: number) => {
         setCurrentSlide(index);
     };
 
