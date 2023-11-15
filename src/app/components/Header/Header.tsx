@@ -1,6 +1,6 @@
 import m from '../../page.module.css'
 import s from '../../styles/Header.module.css'
-import {inter} from "@/app/fonts/fonts";
+import { inter } from "@/app/fonts/fonts";
 
 const Header = () => {
     return(
