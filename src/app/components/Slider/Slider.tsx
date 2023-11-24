@@ -6,13 +6,14 @@ import {useState} from "react";
 import {nunito} from "@/app/fonts/fonts";
 import {SlideType} from "@/app/types/SlideType";
 
+const slides: SlideType[] = [
+    { id: 1, title: "Оценка дизайнеру:", description: "Не заслужил, там криво, там непонятно", unit: '3', unitDesc:'и не более'},
+    { id: 2, title: "Сложность задания", description: "Миссия с вертолетиком была легче..", unit: '5', unitDesc: 'звезд' },
+    { id: 3, title: "Потребовалось на тестовое задание:", description: "Справился быстро, забыл пообедать", unit: '9', unitDesc: 'часов' },
+];
+
 const Slider = () => {
     const [currentSlide, setCurrentSlide] = useState<number>(0);
-    const slides: SlideType[] = [
-        { id: 1, title: "Оценка дизайнеру:", description: "Не заслужил, там криво, там непонятно", unit: '3', unitDesc:'и не более'},
-        { id: 2, title: "Сложность задания", description: "Миссия с вертолетиком была легче..", unit: '5', unitDesc: 'звезд' },
-        { id: 3, title: "Потребовалось на тестовое задание:", description: "Справился быстро, забыл пообедать", unit: '9', unitDesc: 'часов' },
-    ];
 
     const changeSlide = (index: number) => {
         setCurrentSlide(index);
@@ -26,7 +27,7 @@ const Slider = () => {
                     <div className={s.carousel__container}>
                         {slides.map((slide, index) => (
                             <div
-                                className={`${s.slide} ${index === currentSlide ? `${s.active}` : ""}`}
+                                className={`${s.slide} ${index === currentSlide && `${s.active}`}`}
                                 key={slide.id}
                             >
                                 <div className={s.unit}>
@@ -46,7 +47,7 @@ const Slider = () => {
                     <div className={s.pagination}>
                         {slides.map((slide, index) => (
                             <span
-                                className={`${s.dot} ${index === currentSlide ? `${s.active}` : ""}`}
+                                className={`${s.dot} ${index === currentSlide && `${s.active}`}`}
                                 key={slide.id}
                                 onClick={() => changeSlide(index)}
                             ></span>
